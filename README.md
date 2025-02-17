@@ -39,6 +39,6 @@
     └── rag_agent.py # RAG Agent
     └── rag_naive.py # 传统RAG
 
-## 事例问题
+## 测试问题
 
 孙悟空有两个师傅,他们分别是谁?
