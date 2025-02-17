@@ -1,0 +1,24 @@
+# Python虚拟环境
+.venv/
+venv/
+ENV/
+
+# Python编译文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 分发/打包
+dist/
+build/
+*.egg-info/
+
+# IDE配置文件
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 操作系统文件
+.DS_Store
+Thumbs.db 
