@@ -1,0 +1,21 @@
+# Python 虚拟环境
+.venv/
+venv/
+ENV/
+
+# Python 缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 版本控制
+.git/
+
+# 项目特定目录
+西游记白话文/
+output/
+vector_db/
+
+# IDE 配置
+.idea/
+.vscode/

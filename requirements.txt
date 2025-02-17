@@ -1,0 +1,7 @@
+transformers
+langchain
+langchain-community
+langchain-huggingface
+faiss-cpu
+tqdm
+smolagents
