@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/4c1ec2ad-aebb-491c-97c2-3faf6f8c64c3)
+
 #  RAG_Agent 
 
 这是一个基于西游记白话文版本构建的 RAG_Agent (检索增强生成) 智能问答系统。该项目使用西游记白话文文本作为知识库，通过 RAG_AGENT 技术实现对西游记相关问题的智能回答。
