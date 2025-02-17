@@ -4,6 +4,14 @@
 
 对比了传统RAG与RAG_Agent的不同.
 
+## 使用说明
+
+导入openrouter的key到环境变量:
+
+  export OPENROUTER_API_KEY=xxx
+
+运行rag_naive.py和rag_agent.py直接可以看到对比效果了.
+
 ## 数据集说明
 
 本项目使用改编版《西游记》白话文作为基础数据集. 

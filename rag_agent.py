@@ -46,52 +46,18 @@ def retriever(query:str)->str:
 
 question = "孙悟空有两个师傅,他们分别是谁?"
 
-# rag_agent_prompt = f"""
-# 根据你的知识库，回答以下问题。
-# 请只回答问题，回答应该简洁且与问题相关。
-# 如果你无法找到信息，不要放弃，尝试使用不同的参数再次调用你的 retriever 工具。
-# 确保通过多次使用语义不同的查询来完全覆盖问题。
-# 你的查询不应是问题，而是肯定形式的句子：例如，与其问"如何从 Hub 加载 bf16 模型？"，不如问"从 Hub 加载 bf16 权重"。
-
-
-# Question:
-# {question}
-
-# """
-
-# agent = ToolCallingAgent(tools=[retriever], model=model, add_base_tools=False)
-
-
-# agent.run(
-#     rag_agent_prompt,
-# )
-
-
-
-
-
-context = retriever(question)
-
-naive_agent_prompt = f"""
-根据下面的问题和支持文档，给出一个全面的答案。
-只回答所问的问题，回答应该简洁且与问题相关。
-如果你无法找到信息，就如实回答。
+rag_agent_prompt = f"""
+根据你的知识库，回答以下问题。
+请只回答问题，回答应该简洁且与问题相关。
+如果你无法找到信息，不要放弃，尝试使用不同的参数再次调用你的 retriever 工具。
+确保通过多次使用语义不同的查询来完全覆盖问题。
+你的查询不应是问题，而是肯定形式的句子：例如，与其问"如何从 Hub 加载 bf16 模型？"，不如问"从 Hub 加载 bf16 权重"。
 
 Question:
-{question}
+{question}"""
 
-{context}
-    """
+agent = ToolCallingAgent(tools=[retriever], model=model, add_base_tools=False)
 
-logger.info(f"naive_agent_prompt完整提示词:\n {naive_agent_prompt}")
-
-# naive_agent = ToolCallingAgent(tools=[], model=model, add_base_tools=False)
-# # print(naive_agent.prompt_templates["system_prompt"])
-
-# naive_agent.run(
-#     naive_agent_prompt,
-# )
-
-
-a = model(messages=[{"role": "user", "content": naive_agent_prompt}])
-logger.info(a.content)
+agent.run(
+    rag_agent_prompt,
+)
