@@ -7,8 +7,10 @@
 ## 使用说明
 
 导入openrouter的key到环境变量:
-
-  export OPENROUTER_API_KEY=xxx
+  
+  ```
+    export OPENROUTER_API_KEY=xxx
+  ```
 
 运行rag_naive.py和rag_agent.py直接可以看到对比效果了.
 
